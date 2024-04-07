@@ -43,7 +43,7 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v3
         with:
-          name: java-app
+          name: gs-maven-0.1.0.jar
       
       - name: Login to Azure
         uses: azure/login@v1
@@ -58,5 +58,5 @@ jobs:
         with:
           app-name: 'sandy8321m'
           slot-name: 'Production'
-          package: '*.jar'
+          package: 'gs-maven-0.1.0.jar'
           
