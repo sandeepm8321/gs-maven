@@ -22,10 +22,10 @@ jobs:
           java-version: '17'
 
       - name: compile with Maven
-        run: mvn -f initial/pom.xml compile
+        run: mvn compile
         
       - name: package with Maven
-        run: mvn -f initial/pom.xml package
+        run: mvn package
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
