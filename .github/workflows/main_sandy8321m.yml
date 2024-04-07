@@ -20,9 +20,12 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: '17'
-      
-      - name: Build with Maven
-        run: mvn -f initial/pom.xml clean install
+
+      - name: compile with Maven
+        run: mvn -f initial/pom.xml compile
+        
+      - name: package with Maven
+        run: mvn -f initial/pom.xml package
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
