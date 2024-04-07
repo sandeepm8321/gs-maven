@@ -43,7 +43,7 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v3
         with:
-          name: java-app.jar
+          name: gs-maven-0.1.0.jar
       
       - name: Login to Azure
         uses: azure/login@v1
